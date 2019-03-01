@@ -30,13 +30,41 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach - executes a provided function once for each array element. It doesn’t actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.
+
+map -  creates a new array with the results of calling a provided function on every element in the calling array.
+It will call a provided function on every element in the array. The difference is that map() utilizes return values and actually returns a new Array of the same size.
+
 2. What is the difference between a function and a method?
+A function is a set of code to do some task. It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value).
+
+A method is a piece of code that is called by a name that is associated with an object.Method is also a function which is used as a property in Object. So using a function as property inside an object is a method.
 
 3. What is closure?
 
+A closure is a behavior(feature) in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
+The closure has three scope chains:
+1. it has access to its own scope — variables defined between its curly brackets
+2. it has access to the outer function’s variables
+3. it has access to the global variables
+
 4. Describe the four rules of the 'this' keyword.
 
+The keyword "this" is a reserved keyword in JS and its value is determined at execution.
+It is either set using:
+
+1. Global context - when set in the global context in a function, it is either the global object (window if in the browser) or undefined (if we are using strict mode)
+
+ 2. Implicit (automatic) binding (Object binding) - when the keyword 'this is inside of a declared object the value of the keyword 'this' will always be the closest parent object.
+
+3. Explicit (we control this) binding (Function binding) - to explicitly set the value of the keyword 'this, we use call, apply, or bind, which are build in methods on a function for changing pointer of the 'this' keyword.
+
+4. The New keyword binding - we use the 'new' keyword to set the context of 'this' to the newly created object 
+
 5. Why do we need super() in an extended class?
+
+The super keyword is used as a “function” which calls the parent class with the parameters passed to child(subclass). This is a key step to be carried out in order to make sure that child is an instance of parent. So in order to child gain access and can call functions on an object's parent, it should be called inside the constructor.
+
 
 ## Project Set up
 
