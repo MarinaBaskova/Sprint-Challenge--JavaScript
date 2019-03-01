@@ -85,9 +85,6 @@ universities.sort();
 console.log(universities); 
 
 
-
-
-
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -158,9 +155,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = zooAnimals.map(el => el.animal_name.toLowerCase());
-
-
+const lowerCase = zooAnimals.map(element => element.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -176,9 +171,7 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = zooAnimals.reduce(function(acc, cur){
-  return acc + cur.population;
-},0);
+const populationTotal = zooAnimals.reduce((acc, cur) => acc + cur.population, 0);
 console.log(populationTotal);
 
 
